@@ -1,6 +1,7 @@
 var formidable = require('formidable'),
     http = require('http'),
-    util = require('util');
+    util = require('util'),
+    port = process.env.PORT || 5000;
 
 http.createServer(function (req, res) {
 
@@ -34,5 +35,5 @@ http.createServer(function (req, res) {
     
     console.log(req.connection.remoteAddress + " " + req.method + " " + req.url + " " + res.statusCode + " " + req.headers['user-agent']);
     
-}).listen(80, '0.0.0.0');
+}).listen(port, '0.0.0.0');
 console.log('Server running');
