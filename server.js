@@ -36,4 +36,4 @@ http.createServer(function (req, res) {
     console.log(req.connection.remoteAddress + " " + req.method + " " + req.url + " " + res.statusCode + " " + req.headers['user-agent']);
     
 }).listen(port, '0.0.0.0');
-console.log('Server running');
+console.log('Server running on ' + port);
